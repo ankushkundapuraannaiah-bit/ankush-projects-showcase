@@ -9,9 +9,10 @@ interface ProjectCardProps {
   githubUrl?: string;
   liveUrl?: string;
   image?: string;
+  qrCode?: string;
 }
 
-const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image, qrCode }: ProjectCardProps) => {
   return (
     <Card className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:scale-[1.02]">
       {/* Project Image/Placeholder */}
@@ -49,6 +50,14 @@ const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image }: Pr
             </Badge>
           ))}
         </div>
+
+        {/* QR Code for App Download */}
+        {qrCode && (
+          <div className="mt-4 p-4 bg-background/50 rounded-lg border border-border">
+            <p className="text-xs text-muted-foreground mb-2 text-center">Scan to Download App</p>
+            <img src={qrCode} alt="App Download QR Code" className="w-full max-w-[200px] mx-auto" />
+          </div>
+        )}
 
         {/* Links */}
         <div className="flex gap-3 pt-2">
