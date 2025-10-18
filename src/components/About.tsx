@@ -21,13 +21,21 @@ const About = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-secondary/30">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-20 px-4 bg-gradient-cyber relative">
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage: `
+          linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px)
+        `,
+        backgroundSize: '40px 40px'
+      }}></div>
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             About Me
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-foreground/80 text-lg max-w-2xl mx-auto">
             A passionate developer dedicated to crafting exceptional digital experiences 
             and solving real-world problems through technology.
           </p>
@@ -37,15 +45,18 @@ const About = () => {
           {skills.map((skill, index) => (
             <Card 
               key={index}
-              className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow"
+              className="p-6 bg-card/80 backdrop-blur-sm border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-cyber group relative overflow-hidden"
             >
-              <div className="text-primary mb-4">{skill.icon}</div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">
-                {skill.title}
-              </h3>
-              <p className="text-muted-foreground text-sm">
-                {skill.description}
-              </p>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative z-10">
+                <div className="text-primary mb-4 group-hover:scale-110 transition-transform">{skill.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">
+                  {skill.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {skill.description}
+                </p>
+              </div>
             </Card>
           ))}
         </div>
