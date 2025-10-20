@@ -12,45 +12,6 @@ const Projects = () => {
       image: codeathonCert,
       qrCode: cyberguardQr,
     },
-    {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with payment integration, inventory management, and real-time order tracking.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-    },
-    {
-      title: "Task Management App",
-      description: "Collaborative task management system with team features, real-time updates, and productivity analytics.",
-      tags: ["TypeScript", "Next.js", "PostgreSQL", "Prisma"],
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Real-time weather application with location-based forecasts, interactive maps, and weather alerts.",
-      tags: ["React", "API Integration", "Tailwind CSS"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-    },
-    {
-      title: "Social Media Analytics",
-      description: "Analytics dashboard for social media metrics with data visualization and performance insights.",
-      tags: ["Vue.js", "Python", "FastAPI", "Chart.js"],
-      githubUrl: "https://github.com",
-    },
-    {
-      title: "AI Chatbot",
-      description: "Intelligent chatbot with natural language processing, context awareness, and multi-language support.",
-      tags: ["Python", "NLP", "TensorFlow", "React"],
-      liveUrl: "https://example.com",
-    },
-    {
-      title: "Portfolio CMS",
-      description: "Custom content management system for portfolio websites with drag-and-drop builder and SEO optimization.",
-      tags: ["React", "Express", "MySQL", "AWS"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-    },
   ];
 
   return (
