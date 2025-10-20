@@ -5,7 +5,7 @@ import codeathonCert from "@/assets/codeathon-certificate.png";
 const Projects = () => {
   const projects = [
     {
-      title: "Cyberguard - Codeathon Winner",
+      title: "Cyberguard - Codeathon",
       description: "Developed during the Codeathon conducted by AiFi at REVA University on September 18, 2025. A comprehensive platform (app & website) to report cyberbullying incidents through social media platforms like Facebook, Instagram, and more. Created with a dedicated team to combat online harassment and promote digital safety.",
       tags: ["React", "AI/ML", "Social Safety", "Mobile App"],
       liveUrl: "https://uni-safe-ai.lovable.app/",
