@@ -1,6 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code2, Database, Cloud, GitBranch, Blocks, Terminal, Award } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import googleStudyJamCert from "@/assets/google-study-jam-certificate.jpg";
 
 const Skills = () => {
   const skillCategories = [
@@ -38,6 +41,7 @@ const Skills = () => {
       icon: <Award className="h-6 w-6" />,
       category: "Certifications & Achievements",
       skills: ["Google Study Jam - 19 Skill Badges", "Google Study Jam - 1 Arcade Game Badge"],
+      certificate: googleStudyJamCert,
     },
   ];
 
@@ -78,6 +82,23 @@ const Skills = () => {
                   </Badge>
                 ))}
               </div>
+              {category.certificate && (
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="mt-4 text-xs text-primary hover:underline flex items-center gap-1">
+                      <Award className="h-3 w-3" />
+                      View Certificate
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-3xl">
+                    <img 
+                      src={category.certificate} 
+                      alt={`${category.category} Certificate`}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </DialogContent>
+                </Dialog>
+              )}
             </Card>
           ))}
         </div>
