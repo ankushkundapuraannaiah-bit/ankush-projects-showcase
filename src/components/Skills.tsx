@@ -8,36 +8,6 @@ import googleStudyJamCert from "@/assets/google-study-jam-certificate.jpg";
 const Skills = () => {
   const skillCategories = [
     {
-      icon: <Code2 className="h-6 w-6" />,
-      category: "Frontend",
-      skills: ["React", "TypeScript", "JavaScript", "HTML/CSS", "Tailwind CSS", "Next.js"],
-    },
-    {
-      icon: <Database className="h-6 w-6" />,
-      category: "Backend",
-      skills: ["Node.js", "Express", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB"],
-    },
-    {
-      icon: <Cloud className="h-6 w-6" />,
-      category: "Cloud & DevOps",
-      skills: ["AWS", "Docker", "CI/CD", "Git", "Linux", "Kubernetes"],
-    },
-    {
-      icon: <Blocks className="h-6 w-6" />,
-      category: "Blockchain",
-      skills: ["Web3", "Solidity", "Smart Contracts", "Ethereum", "DApps"],
-    },
-    {
-      icon: <Terminal className="h-6 w-6" />,
-      category: "Tools & Others",
-      skills: ["VS Code", "Visual Studio", "App Studio", "Figma", "Postman", "Firebase", "Supabase", "Vercel"],
-    },
-    {
-      icon: <GitBranch className="h-6 w-6" />,
-      category: "Methodologies",
-      skills: ["Agile", "Scrum", "TDD", "Microservices", "RESTful Design"],
-    },
-    {
       icon: <Award className="h-6 w-6" />,
       category: "Certifications & Achievements",
       skills: ["Google Study Jam - 19 Skill Badges", "Google Study Jam - 1 Arcade Game Badge"],
