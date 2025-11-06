@@ -27,7 +27,7 @@ const Skills = () => {
     {
       icon: <Terminal className="h-6 w-6" />,
       category: "Tools & Others",
-      skills: ["VS Code", "Figma", "Postman", "Firebase", "Supabase", "Vercel"],
+      skills: ["VS Code", "Visual Studio", "App Studio", "Figma", "Postman", "Firebase", "Supabase", "Vercel"],
     },
     {
       icon: <GitBranch className="h-6 w-6" />,
