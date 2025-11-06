@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code2, Database, Cloud, GitBranch, Blocks, Terminal } from "lucide-react";
+import { Code2, Database, Cloud, GitBranch, Blocks, Terminal, Award } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -33,6 +33,11 @@ const Skills = () => {
       icon: <GitBranch className="h-6 w-6" />,
       category: "Methodologies",
       skills: ["Agile", "Scrum", "TDD", "Microservices", "RESTful Design"],
+    },
+    {
+      icon: <Award className="h-6 w-6" />,
+      category: "Certifications & Achievements",
+      skills: ["Google Study Jam - 19 Skill Badges", "Google Study Jam - 1 Arcade Game Badge"],
     },
   ];
 
