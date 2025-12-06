@@ -19,7 +19,7 @@ const Projects = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Projects
+            Certification and Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A collection of projects showcasing my skills in web development, 
