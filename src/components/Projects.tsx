@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import cyberguardQr from "@/assets/cyberguard-qr.jpg";
 import codeathonCert from "@/assets/codeathon-certificate.png";
+import wadhwaniCert from "@/assets/wadhwani-ignite-certificate.jpg";
 
 const Projects = () => {
   const projects = [
@@ -11,6 +12,12 @@ const Projects = () => {
       liveUrl: "https://uni-safe-ai.lovable.app/",
       image: codeathonCert,
       qrCode: cyberguardQr,
+    },
+    {
+      title: "Ignite India 5.0 - Wadhwani Foundation",
+      description: "Successfully completed the Ignite India 5.0 program conducted by Wadhwani Foundation on December 06, 2025. Gained key entrepreneurial skills in ideation, business modeling, and financial planning through 42 hours of comprehensive training and assessments.",
+      tags: ["Entrepreneurship", "Ideation", "Business Modeling", "Financial Planning"],
+      image: wadhwaniCert,
     },
   ];
 
