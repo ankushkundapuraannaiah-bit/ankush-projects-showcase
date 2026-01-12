@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import cyberguardQr from "@/assets/cyberguard-qr.jpg";
 import codeathonCert from "@/assets/codeathon-certificate.png";
 import wadhwaniCert from "@/assets/wadhwani-ignite-certificate.jpg";
+import yuvaAiCert from "@/assets/yuva-ai-certificate.jpg";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,6 +36,12 @@ const Projects = () => {
       liveUrl: "https://uni-safe-ai.lovable.app/",
       image: codeathonCert,
       qrCode: cyberguardQr,
+    },
+    {
+      title: "Yuva AI for All - National AI Programme",
+      description: "Successfully completed the Yuva AI for All national level AI programme conducted by FutureSkills and NASSCOM on December 22, 2025. Gained foundational knowledge in Artificial Intelligence, machine learning concepts, and practical AI applications.",
+      tags: ["Artificial Intelligence", "Machine Learning", "NASSCOM", "FutureSkills"],
+      image: yuvaAiCert,
     },
     {
       title: "Ignite India 5.0 - Wadhwani Foundation",
