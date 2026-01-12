@@ -1,7 +1,30 @@
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import cyberguardQr from "@/assets/cyberguard-qr.jpg";
 import codeathonCert from "@/assets/codeathon-certificate.png";
 import wadhwaniCert from "@/assets/wadhwani-ignite-certificate.jpg";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.4, 0, 0.2, 1] as const,
+    },
+  },
+};
 
 const Projects = () => {
   const projects = [
@@ -24,7 +47,13 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16 space-y-4">
+        <motion.div 
+          className="text-center mb-16 space-y-4"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Certification and Projects
           </h2>
@@ -32,13 +61,21 @@ const Projects = () => {
             A collection of projects showcasing my skills in web development, 
             problem-solving, and creating user-centric applications.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <motion.div key={index} variants={itemVariants}>
+              <ProjectCard {...project} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
