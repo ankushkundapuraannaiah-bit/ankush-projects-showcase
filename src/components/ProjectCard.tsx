@@ -11,9 +11,10 @@ interface ProjectCardProps {
   liveUrl?: string;
   image?: string;
   qrCode?: string;
+  imageRotation?: number;
 }
 
-const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image, qrCode }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image, qrCode, imageRotation = 0 }: ProjectCardProps) => {
   return (
     <Card className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow h-full">
       {/* Project Image/Placeholder */}
@@ -27,6 +28,7 @@ const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image, qrCo
             src={image} 
             alt={title} 
             className="w-full h-full object-contain bg-white/90 dark:bg-gray-900/90"
+            style={{ transform: `rotate(${imageRotation}deg)` }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5 }}
           />
