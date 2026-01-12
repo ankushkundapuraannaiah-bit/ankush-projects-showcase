@@ -96,10 +96,11 @@ All colors MUST be HSL.
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-colors duration-300;
   }
 
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.5s ease, color 0.3s ease;
   }
 }
