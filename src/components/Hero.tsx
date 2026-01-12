@@ -1,10 +1,44 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, GraduationCap, Terminal } from "lucide-react";
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg-futuristic.jpg";
 import logo from "@/assets/logo.png";
 
+const useTypewriter = (text: string, speed: number = 80, delay: number = 500) => {
+  const [displayedText, setDisplayedText] = useState("");
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    
+    const startTyping = () => {
+      let currentIndex = 0;
+      
+      const typeNextChar = () => {
+        if (currentIndex < text.length) {
+          setDisplayedText(text.slice(0, currentIndex + 1));
+          currentIndex++;
+          timeoutId = setTimeout(typeNextChar, speed);
+        } else {
+          setIsComplete(true);
+        }
+      };
+      
+      timeoutId = setTimeout(typeNextChar, delay);
+    };
+
+    startTyping();
+
+    return () => clearTimeout(timeoutId);
+  }, [text, speed, delay]);
+
+  return { displayedText, isComplete };
+};
+
 const Hero = () => {
+  const fullName = "Ankush Kundapura Annaiah";
+  const { displayedText, isComplete } = useTypewriter(fullName, 80, 800);
+
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -123,14 +157,23 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Name with developer style */}
+          {/* Name with typewriter effect */}
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold min-h-[1.2em] md:min-h-[1.2em]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Ankush Kundapura Annaiah
+            <span className="text-blue-500 dark:text-blue-400" style={{ textShadow: '0 0 30px rgba(59, 130, 246, 0.5), 0 0 60px rgba(59, 130, 246, 0.3)' }}>
+              {displayedText}
+            </span>
+            {!isComplete && (
+              <motion.span
+                className="inline-block w-1 md:w-2 h-12 md:h-16 bg-blue-500 ml-1 align-middle"
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 0.6, repeat: Infinity }}
+              />
+            )}
           </motion.h1>
           
           {/* Student Info Badge */}
