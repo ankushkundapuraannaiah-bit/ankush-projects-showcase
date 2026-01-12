@@ -26,8 +26,8 @@ const ProjectCard = ({ title, description, tags, githubUrl, liveUrl, image, qrCo
           <motion.img 
             src={image} 
             alt={title} 
-            className="w-full h-full object-cover"
-            whileHover={{ scale: 1.1 }}
+            className="w-full h-full object-contain bg-white/90 dark:bg-gray-900/90"
+            whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5 }}
           />
         ) : (
