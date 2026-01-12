@@ -42,6 +42,7 @@ const Projects = () => {
       description: "Successfully completed the Yuva AI for All national level AI programme conducted by FutureSkills and NASSCOM (IT-ITeS SSC) on December 22, 2025. Covered key modules including: Introduction to AI & ML fundamentals, Neural Networks & Deep Learning basics, Natural Language Processing (NLP), Computer Vision applications, AI Ethics & Responsible AI, and hands-on projects with real-world AI tools. Gained practical skills in Python for AI, data preprocessing, model training, and deploying AI solutions.",
       tags: ["Artificial Intelligence", "Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Python", "NASSCOM"],
       image: yuvaAiCert,
+      imageRotation: 180,
     },
     {
       title: "Ignite India 5.0 - Wadhwani Foundation",
